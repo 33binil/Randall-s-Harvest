@@ -1,10 +1,10 @@
 import React from 'react'
-import Landing from "./pages/Landing.jsx";
+import Home from "./pages/Home.jsx";
 
 const App = () => {
     return (
         <div>
-            <Landing />
+            <Home />
         </div>
     )
 }

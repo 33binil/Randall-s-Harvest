@@ -29,6 +29,8 @@ export default {
       },
       fontFamily: {
         michroma: ["Michroma", "sans-serif"],
+        andika: ["'Andika New Basic'", "sans-serif"],
+        albert: ["Albert Sans", "sans-serif"],
       },
     },
   },
