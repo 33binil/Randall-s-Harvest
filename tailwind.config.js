@@ -1,0 +1,36 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        floatY: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        zoomRotate: {
+          "0%": { transform: "scale(0.8) rotate(0deg)", opacity: "0" },
+          "100%": { transform: "scale(1) rotate(15deg)", opacity: "0.5" },
+        },
+        dropIn: {
+          "0%": { transform: "translateY(-100vh)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        "float-y": "floatY 3s ease-in-out infinite",
+        "zoom-rotate-once": "zoomRotate 2s ease-out forwards",
+        "drop-in": "dropIn 1.2s ease-out forwards",
+        // combo: first dropIn, then floatY
+        "drop-then-float": "dropIn 1.2s ease-out forwards, floatY 3s ease-in-out infinite 1.2s",
+      },
+      fontFamily: {
+        michroma: ["Michroma", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+}
