@@ -42,9 +42,9 @@ const Home = () => {
                 </div>
 
                 {/* Hero Section */}
-                <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:mt-24 mt-5">
+                <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:mt-24 -mt-5">
                     {/* Left - Text */}
-                    <div className="relative lg:w-1/2 text-center left-0 lg:left-64 lg:text-left lg:mt-0 mt-8">
+                    <div className="relative lg:w-1/2 text-center left-0 lg:left-64 lg:text-left lg:mt-12 mt-3">
                         <h1 className="text-white font-andika text-[36px] lg:text-[60px] font-bold leading-tight">
                             Elevate Your <br /> Culinary Experience
                         </h1>
@@ -126,11 +126,11 @@ const Home = () => {
                     alt="Product"
                     className="w-[300px] lg:w-[509px] h-auto rotate-[-6deg]"
                 />
-                <div className="relative lg:w-[653px] w-[383px]">
+                <div className="relative lg:w-[653px] w-[343px]">
                     <h1 className="text-white font-bold font-andika text-[30px] lg:text-[42px] mb-6">
                         Why Choose Omniblend
                     </h1>
-                    <p className="text-white font-andika text-[14px] lg:text-[20px] mb-6">
+                    <p className="text-white font-andika text-[14px] lg:text-[20px] mb-6 ">
                         Because your time, taste, and standards deserve better. Cooking
                         shouldn't be a chore—or a flavorless routine. Whether it’s breakfast
                         or a midnight snack, OmniBlend replaces cluttered spice racks and
@@ -138,7 +138,7 @@ const Home = () => {
                         OmniBlend — where flavor meets freedom.
                     </p>
                     <h2 className="text-white font-andika text-[24px] mb-6">₹ 179.00</h2>
-                    <button className="w-[170px] h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                    <button className="w-[170px] h-[40px] mb-16 lg:mb-0 rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                         🛒 Add to Cart
                     </button>
                 </div>
@@ -170,7 +170,7 @@ const Home = () => {
             </div>
 
             {/* 5th div - Footer */}
-            <div className="w-full bg-transparent flex flex-col items-center">
+            <div className="w-full bg-transparent flex flex-col items-center mt-8">
                 <img src="/logo1.png" alt="Logo" className="lg:w-[148px] lg:h-[56px] w-[100px] h-[40px] mt-8 mb-7" />
 
                 <div className="flex space-x-8 mb-9">
@@ -189,8 +189,8 @@ const Home = () => {
                     </button>
                 </div>
 
-                <div className="flex items-center space-x-2 text-gray-400 text-sm mt-8 lg:mt-9 mb-1">
-                    <Copyright className="w-4 h-4" />
+                <div className="flex items-center space-x-2 text-gray-400 text-[12px] mt-8 lg:mt-9 mb-1">
+                    <Copyright className="w-3 h-3" />
                     <span>2025 Randall’s Omniblend. All rights reserved.</span>
                 </div>
             </div>
