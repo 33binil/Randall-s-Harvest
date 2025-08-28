@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
     Leaf,
     FlaskConical,
@@ -10,7 +11,12 @@ import {
 
 const Home = () => {
     return (
-        <section className="w-full min-h-screen flex flex-col items-center bg-[#171816]">
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816]"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
             {/* 1st div - Hero */}
             <div
                 className="w-full min-h-screen px-12"
@@ -22,7 +28,7 @@ const Home = () => {
                 <div className="flex items-center justify-between py-5 lg:py-8 ">
                     <img src="/logo1.png" alt="Logo" className="relative w-[74px] h-[25px] lg:w-[110px] lg:h-[42px] right-5 lg:right-0" />
 
-                    <div className="hidden md:flex space-x-10 font-bold text-white font-andika">
+                    <div className="hidden md:flex space-x-16 font-bold text-white font-andika">
                         <button>Home</button>
                         <button>Story</button>
                         <button>Shop</button>
@@ -60,10 +66,13 @@ const Home = () => {
 
                     {/* Right - Image */}
                     <div className="relative lg:mt-0 right-0 lg:right-52 animate-float-y">
-                        <img
+                        <motion.img
                             src="/omniblend.png"
                             alt="Product"
                             className="w-[300px] lg:w-[550px] rotate-[7deg]"
+                            initial={{ scale: 1.4, rotate: 40, opacity: 0 }}
+                            animate={{ scale: 1, rotate: 7, opacity: 1 }}
+                            transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
                         />
                     </div>
                 </div>
@@ -124,7 +133,7 @@ const Home = () => {
                 <img
                     src="/omniblend.png"
                     alt="Product"
-                    className="w-[300px] lg:w-[509px] h-auto rotate-[-6deg]"
+                    className="w-[300px] lg:w-[509px] h-auto rotate-[-6deg] "
                 />
                 <div className="relative lg:w-[653px] w-[343px]">
                     <h1 className="text-white font-bold font-andika text-[30px] lg:text-[42px] mb-6">
@@ -194,8 +203,9 @@ const Home = () => {
                     <span>2025 Randall’s Omniblend. All rights reserved.</span>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
 export default Home;
+
