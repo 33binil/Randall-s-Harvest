@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
     Leaf,
@@ -29,8 +30,8 @@ const Home = () => {
                     <img src="/logo1.png" alt="Logo" className="relative w-[74px] h-[25px] lg:w-[110px] lg:h-[42px] right-5 lg:right-0" />
 
                     <div className="hidden md:flex space-x-16 font-bold text-white font-andika">
-                        <button>Home</button>
-                        <button>Story</button>
+                        <Link to="/home">Home</Link>
+                        <Link to="/story">Story</Link>
                         <button>Shop</button>
                         <button>Cart</button>
                         <button>Contact Us</button>
@@ -40,9 +41,9 @@ const Home = () => {
                         Login
                     </button>
                     <div className="md:hidden flex relative left-7">
-                        <button>
+                        <a href="/toggle" aria-label="Menu">
                             <AlignJustify className="text-white hover:text-[#38611F]"/>
-                        </button>
+                        </a>
 
                     </div>
                 </div>
