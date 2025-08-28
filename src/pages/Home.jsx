@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 import {
     Leaf,
     FlaskConical,
@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <motion.section
             className="w-full min-h-screen flex flex-col items-center bg-[#171816]"
@@ -41,10 +42,9 @@ const Home = () => {
                         Login
                     </button>
                     <div className="md:hidden flex relative left-7">
-                        <a href="/toggle" aria-label="Menu">
-                            <AlignJustify className="text-white hover:text-[#38611F]"/>
-                        </a>
-
+                        <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
+                            <AlignJustify className="text-white"/>
+                        </button>
                     </div>
                 </div>
 

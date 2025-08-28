@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import {AlignJustify, Leaf, Award, Users, Lightbulb, Scale, Headset, Instagram, MessageCircleReply, Copyright} from "lucide-react";
 
 const Story = () => {
+    const navigate = useNavigate();
     return (
         <div
             className="w-full min-h-screen"
@@ -28,9 +30,9 @@ const Story = () => {
                             Login
                         </button>
                         <div className="md:hidden flex right-4 relative">
-                            <a href="/toggle" aria-label="Menu">
-                                <AlignJustify className="text-white hover:text-[#38611F]"/>
-                            </a>
+                            <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
+                                <AlignJustify className="text-white"/>
+                            </button>
                         </div>
                     </div>
                     <div className="relative justify-center text-center rihg z-20 lg:mt-4 mt-8 space-y-2">
