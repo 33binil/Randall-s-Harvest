@@ -1,10 +1,17 @@
 import React from 'react'
+import { motion } from "framer-motion";
 import {Link, useNavigate} from 'react-router-dom'
 import {AlignJustify, Leaf, Award, Users, Lightbulb, Scale, Headset, Instagram, MessageCircleReply, Copyright} from "lucide-react";
 
 const Story = () => {
     const navigate = useNavigate();
     return (
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
         <div
             className="w-full min-h-screen"
             style={{
@@ -32,9 +39,13 @@ const Story = () => {
                             Login
                         </Link>
 
-                        <div className="md:hidden flex right-4 relative">
-                            <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
-                                <AlignJustify className="text-white"/>
+                        <div className="md:hidden flex">
+                            <button
+                                onClick={() => navigate("/toggle")}
+                                aria-label="Menu"
+                                className="p-2 hover:text-[#38611F] transition"
+                            >
+                                <AlignJustify className="text-white" />
                             </button>
                         </div>
                     </div>
@@ -55,7 +66,9 @@ const Story = () => {
             >
                 {/* Centered heading row */}
                 <div className="w-full flex justify-center">
-                    <h2 className="text-white font-andika font-bold text-[28px] sm:text-[32px] lg:text-[36px] text-center inline-block border-b-2 border-white/65 pb-2 mt-8">
+                    <h2 className="text-white font-andika font-bold text-[28px] sm:text-[32px] lg:text-[36px] text-center inline-block border-b-2 border-white/65 pb-2 mt-8"
+                        data-aos="fade-down"
+                        data-aos-delay="100">
                         Introducing Omniblend
                     </h2>
                 </div>
@@ -63,17 +76,22 @@ const Story = () => {
                 {/* Content: image left, paragraph right on desktop; stacked on mobile */}
                 <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Left: Product */}
-                    <div className="flex justify-center lg:justify-start">
-                        <img
+                    <div className="flex justify-center lg:justify-start animate-float-y">
+                        <motion.img
                             src="/omniblend.png"
                             alt="Omniblend product"
                             className="w-[240px] sm:w-[280px] lg:w-[420px] rotate-[-8deg]"
+                            initial={{ scale: 1.3, rotate: 40, opacity: 0 }}
+                            animate={{ scale: 1, rotate: -9, opacity: 1 }}
+                            transition={{ duration: 1.1, ease: "easeOut", delay: 0.2 }}
                         />
                     </div>
 
                     {/* Right: Paragraph */}
                     <div className="flex justify-center lg:justify-start">
-                        <p className="text-white/90 font-andika text-[16px] sm:text-[18px] lg:text-[24px] leading-relaxed max-w-[780px] text-center lg:text-left">
+                        <p className="text-white/90 font-andika text-[16px] sm:text-[18px] lg:text-[24px] leading-relaxed max-w-[780px] text-center lg:text-left"
+                           data-aos="fade-down"
+                           data-aos-delay="100">
                             OmniBlend is our all-in-one spice innovation—meticulously balanced with 20+ premium ingredients. From smoked paprika to real sumac, each spice is crushed and powdered for maximum depth and texture. Whether you’re grilling, roasting, stir-frying, or sprinkling on snacks, one shake transforms any meal into a masterpiece.
                         </p>
                     </div>
@@ -87,11 +105,17 @@ const Story = () => {
             >
                 {/* Heading */}
                 <div className=" w-full flex flex-col items-center text-center mt-8">
-                    <h2 className="text-white font-andika font-bold text-[26px] sm:text-[30px] lg:text-[36px]">
+                    <h2 className="text-white font-andika font-bold text-[26px] sm:text-[30px] lg:text-[36px]"
+                        data-aos="fade-down"
+                        data-aos-delay="100">
                         Sourcing The Finest Ingredients
                     </h2>
-                    <div className="w-24 h-[2px] bg-white/70 mt-2 mb-4" />
-                    <p className="text-white/80 font-andika text-[14px] sm:text-[16px] lg:text-[18px] max-w-[900px]">
+                    <div className="w-24 h-[2px] bg-white/70 mt-2 mb-4"
+                         data-aos="fade-down"
+                         data-aos-delay="100"/>
+                    <p className="text-white/80 font-andika text-[14px] sm:text-[16px] lg:text-[18px] max-w-[900px]"
+                       data-aos="fade-down"
+                       data-aos-delay="100">
                         We travel the world to find the highest quality spices, working directly with farmers who share our
                         commitment to sustainable and ethical practices
                     </p>
@@ -116,13 +140,19 @@ const Story = () => {
                             href={item.href}
                             className="group bg-[#2A3028]/80 rounded-lg border border-[#3B4A39]/60 p-4 lg:p-5 shadow-[0_0_0_1px_rgba(0,0,0,0.15)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] hover:border-[#6AC05E]/60 focus:outline-none focus:ring-2 focus:ring-[#6AC05E]/40"
                         >
-                            <div className="w-full h-[160px] lg:h-[180px] rounded-md overflow-hidden mb-4">
+                            <div className="w-full h-[160px] lg:h-[180px] rounded-md overflow-hidden mb-4"
+                                 data-aos="fade-down"
+                                 data-aos-delay="20">
                                 <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             </div>
-                            <h3 className="text-[#6AC05E] font-andika font-bold text-[16px] lg:text-[18px] mb-2">
+                            <h3 className="text-[#6AC05E] font-andika font-bold text-[16px] lg:text-[18px] mb-2"
+                                data-aos="fade-down"
+                                data-aos-delay="20">
                                 {item.title}
                             </h3>
-                            <p className="text-white/85 font-andika text-[13px] lg:text-[14px] leading-relaxed">
+                            <p className="text-white/85 font-andika text-[13px] lg:text-[14px] leading-relaxed"
+                               data-aos="fade-down"
+                               data-aos-delay="20">
                                 {item.desc}
                             </p>
                         </a>
@@ -135,12 +165,18 @@ const Story = () => {
                 className="w-screen px-6 lg:px-16 py-16"
                 style={{ background: "linear-gradient(135deg, #1D2219, #171816)" }}
             >
-                <div className="w-full flex flex-col items-center text-center">
+                <div className="w-full flex flex-col items-center text-center"
+                     data-aos="fade-down"
+                     data-aos-delay="100">
                     <h2 className="text-white font-andika font-bold text-[26px] sm:text-[30px] lg:text-[36px]">
                         Our Values
                     </h2>
-                    <div className="w-20 h-[2px] bg-white/70 mt-2 mb-4" />
-                    <p className="text-white/80 font-andika text-[14px] sm:text-[16px] lg:text-[18px] max-w-[900px]">
+                    <div className="w-20 h-[2px] bg-white/70 mt-2 mb-4"
+                         data-aos="fade-down"
+                         data-aos-delay="100"/>
+                    <p className="text-white/80 font-andika text-[14px] sm:text-[16px] lg:text-[18px] max-w-[900px]"
+                       data-aos="fade-down"
+                       data-aos-delay="100">
                         At Omniblend, our business is built on core principles that guide every decision we make,
                         from sourcing to production to community engagement.
                     </p>
@@ -170,17 +206,21 @@ const Story = () => {
                 style={{ background: "linear-gradient(135deg, #1D2219, #171816)" }}
             >
                 {/* Heading */}
-                <div className="w-full flex flex-col items-center text-center mb-8 lg:mb-12">
+                <div className="w-full flex flex-col items-center text-center mb-8 lg:mb-12"
+                     data-aos="fade-down"
+                     data-aos-delay="100">
                     <h2 className="text-white font-andika font-bold text-[26px] sm:text-[30px] lg:text-[36px]">
                         Honor & Impact
                     </h2>
-                    <div className="w-24 h-[2px] bg-white/70 mt-2 mb-8" />
+                    <div className="w-24 h-[2px] bg-white/70 mt-2 mb-8"/>
                 </div>
 
                 {/* Content */}
                 <div className="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center mb-20">
                     {/* Left: Image */}
-                    <div className="flex justify-center lg:justify-start">
+                    <div className="flex justify-center lg:justify-start"
+                         data-aos="fade-down"
+                         data-aos-delay="100">
                         <div className="rounded-xl bg-black/30 p-4 shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
                             <img
                                 src="/Randall.jpg"
@@ -191,7 +231,9 @@ const Story = () => {
                     </div>
 
                     {/* Right: Copy */}
-                    <div className="text-center lg:text-left">
+                    <div className="text-center lg:text-left"
+                         data-aos="fade-down"
+                         data-aos-delay="100">
                         <p className="text-white font-andika text-[18px] sm:text-[20px] lg:text-[24px] leading-relaxed">
                             In memory of our dear friend Randall L. McConahay, whose passion inspired us daily, a
                             percentage of every order goes to the Randall’s Cremation Society—to plant trees and keep his
@@ -235,6 +277,7 @@ const Story = () => {
                 </div>
             </section>
         </div>
+        </motion.section>
     )
 }
 export default Story

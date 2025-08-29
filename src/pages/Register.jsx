@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { motion } from "framer-motion";
 import {Link, useNavigate} from "react-router-dom";
 import {AlignJustify} from "lucide-react";
 
@@ -8,6 +9,12 @@ const Register = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     return (
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
         <div
             className="w-full min-h-screen relative bg-cover bg-left lg:bg-center"
             style={{
@@ -52,7 +59,7 @@ const Register = () => {
                         <div className="w-full max-w-[1200px] flex flex-col lg:flex-row gap-24">
 
                             {/* Left Side - Login */}
-                            <div className="w-full lg:w-[48%] bg-transparent rounded-xl shadow-lg flex flex-col items-center justify-center px-12 py-10 space-y-4 leading-[1.5rem]">
+                            <div className="w-full lg:w-[48%] bg-transparent animate-float-y rounded-xl shadow-lg flex flex-col items-center justify-center px-12 py-10 space-y-4 leading-[1.5rem]">
                                 {/* Heading */}
                                 <h1 className="text-white text-3xl font-bold mb-2 font-andika">Let’s get Started</h1>
                                 <p className="relative w-[372px] text-center h-auto text-white font-andika text-[16]">
@@ -64,7 +71,7 @@ const Register = () => {
                             <div className="lg:w-[786px] h-auto bg-black/70 rounded-xl shadow-lg px-12 py-10 flex flex-col items-center leading-10">
                                 {/* Heading & Description */}
                                 <h1 className="text-white text-3xl font-bold mb-2 font-andika">Join Us</h1>
-                                <p className="text-gray-300 text-lg mb-6 font-andika text-center">
+                                <p className="text-gray-300 text-lg mb-7 font-andika text-center">
                                     Create your account and start your journey with us.
                                 </p>
 
@@ -162,6 +169,7 @@ const Register = () => {
                 </section>
             </div>
         </div>
+        </motion.section>
     )
 }
 export default Register

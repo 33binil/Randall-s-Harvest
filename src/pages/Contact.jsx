@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion";
 import {Link,useNavigate} from "react-router-dom";
 import {AlignJustify} from "lucide-react";
 import {
@@ -8,6 +9,12 @@ import {
 const Contact = () => {
     const navigate = useNavigate();
     return (
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
         <div
             className="w-full min-h-screen"
             style={{
@@ -34,9 +41,13 @@ const Contact = () => {
                                          text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             Login
                         </Link>
-                        <div className="md:hidden flex right-4 relative">
-                            <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
-                                <AlignJustify className="text-white"/>
+                        <div className="md:hidden flex">
+                            <button
+                                onClick={() => navigate("/toggle")}
+                                aria-label="Menu"
+                                className="p-2 hover:text-[#38611F] transition"
+                            >
+                                <AlignJustify className="text-white" />
                             </button>
                         </div>
                     </div>
@@ -145,12 +156,8 @@ const Contact = () => {
                     </section>
                 </div>
             </section>
-
-
-
-
-
         </div>
+        </motion.section>
     )
 }
 export default Contact

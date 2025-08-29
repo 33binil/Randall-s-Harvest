@@ -70,10 +70,16 @@ const Home = () => {
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-0 lg:mt-32 mt-5">
                     {/* Left - Text */}
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        <h1 className="text-white font-andika text-[32px] lg:text-[60px] animate-fade-drop font-bold leading-tight">
+                        <h1 className="text-white font-andika text-[32px] lg:text-[60px] animate-fade-drop font-bold leading-tight"
+                            data-aos="fade-down"
+                            data-aos-offset="40">
                             Elevate Your <br /> Culinary Experience
                         </h1>
-                        <p className="mt-6 text-white font-andika text-[16px] animate-fade-drop lg:text-[22px] max-w-xl mx-auto lg:mx-0">
+                        <p className="mt-6 text-white font-andika text-[16px] animate-fade-drop lg:text-[22px] max-w-xl mx-auto lg:mx-0"
+                           data-aos="fade-down"
+                           data-aos-delay="300"
+                           data-aos-offset="40">
+
                             Discover Randall's OMNIBLEND, a premium collection of artisanal
                             spice blends crafted to transform ordinary dishes into
                             extraordinary culinary experiences.
@@ -103,18 +109,30 @@ const Home = () => {
                 className="w-full py-16"
                 style={{ background: "linear-gradient(135deg, #1E211D, #161616)" }}
             >
-                <h1 className="text-white font-andika text-[32px] animate-fade-drop lg:text-[40px] text-center font-bold">
+                <h1
+                    className="text-white font-andika text-[32px] lg:text-[40px] text-center font-bold"
+                    data-aos="fade-down"
+                    data-aos-delay="100"
+                >
                     Why Choose Omniblend
                 </h1>
 
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-12 mt-16 lg:mt-12">
                     {/* Box 1 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
-                        <Leaf className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <Leaf className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10" />
+                        <h2
+                            className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10"
+                            data-aos="fade-down"
+                            data-aos-delay="100"
+                        >
                             100% Natural
                         </h2>
-                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p
+                            className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             Sourced from the finest organic farms around the world, free from
                             additives and preservatives.
                         </p>
@@ -122,11 +140,19 @@ const Home = () => {
 
                     {/* Box 2 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
-                        <FlaskConical className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <FlaskConical className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10" />
+                        <h2
+                            className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10"
+                            data-aos="fade-down"
+                            data-aos-delay="100"
+                        >
                             Expertly Crafted
                         </h2>
-                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p
+                            className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             Blended by master herbalists with decades of experience in flavor
                             profiling.
                         </p>
@@ -134,52 +160,94 @@ const Home = () => {
 
                     {/* Box 3 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
-                        <HeartPulse className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <HeartPulse className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10" />
+                        <h2
+                            className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10"
+                            data-aos="fade-down"
+                            data-aos-delay="100"
+                        >
                             Health Benefits
                         </h2>
-                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p
+                            className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
                             Packed with antioxidants and nutrients that support overall
                             wellness and immunity.
                         </p>
                     </div>
                 </div>
+
             </div>
 
             {/* 3rd div - Product Showcase */}
             <div className="w-full mt-6 mb-10 flex flex-col lg:flex-row justify-center items-center gap-20 px-6 lg:px-20">
-                <img
-                    src="/omniblend.png"
-                    alt="Product"
-                    className="w-[260px] lg:w-[480px] h-auto rotate-[-6deg]"
-                />
+                {/* Product Image */}
+                <div className="animate-float-y">
+                    <img
+                        src="/omniblend.png"
+                        alt="Product"
+                        className="w-[260px] lg:w-[480px] h-auto rotate-[-6deg]"
+                    />
+                </div>
+
+                {/* Text Content */}
                 <div className="max-w-[650px]">
-                    <h1 className="text-white animate-fade-drop font-bold font-andika text-[28px] lg:text-[42px] mb-6">
+                    <h1
+                        className="text-white font-bold font-andika text-[28px] lg:text-[42px] mb-6"
+                        data-aos="fade-down"
+                        data-aos-offset="40"
+                    >
                         Why Choose Omniblend
                     </h1>
-                    <p className="text-white animate-fade-drop font-andika text-[14px] lg:text-[18px] mb-6">
+                    <p
+                        className="text-white font-andika text-[14px] lg:text-[18px] mb-6"
+                        data-aos="fade-down"
+                        data-aos-delay="300"
+                        data-aos-offset="40"
+                    >
                         Because your time, taste, and standards deserve better. Cooking
                         shouldn't be a chore—or a flavorless routine. Whether it’s breakfast
                         or a midnight snack, OmniBlend replaces cluttered spice racks and
                         guesswork with one bold shake. <br />
                         OmniBlend — where flavor meets freedom.
                     </p>
-                    <h2 className="text-white animate-fade-drop font-andika text-[22px] mb-6">₹ 179.00</h2>
+                    <h2
+                        className="text-white font-andika text-[22px] mb-6"
+                        data-aos="fade-down"
+                        data-aos-delay="500"
+                        data-aos-offset="40"
+                    >
+                        ₹ 179.00
+                    </h2>
                     <button className="w-[170px] h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                         🛒 Ready to Buy ?
                     </button>
                 </div>
             </div>
 
+
             {/* 4th div - Newsletter */}
             <div
                 className="w-full py-20 px-6"
                 style={{ background: "linear-gradient(135deg, #1E211D, #131313)" }}
             >
-                <h1 className="text-white font-andika text-[26px] lg:text-[42px] text-center font-bold mb-3">
+                <h1
+                    className="text-white font-andika text-[26px] lg:text-[42px] text-center font-bold mb-3"
+                    data-aos="fade-down"
+                    data-aos-offset="40"
+                    data-aos-duration="800"
+                >
                     Join Our Community
                 </h1>
-                <p className="text-white font-andika text-[13px] lg:text-[18px] text-center max-w-[850px] mx-auto mb-10">
+                <p
+                    className="text-white font-andika text-[13px] lg:text-[18px] text-center max-w-[850px] mx-auto mb-10"
+                    data-aos="fade-down"
+                    data-aos-offset="40"
+                    data-aos-delay="200"
+                    data-aos-duration="800"
+                >
                     Subscribe to receive exclusive recipes, special offers, and expert
                     tips on how to make the most of your Omniblend spices.
                 </p>
@@ -195,6 +263,7 @@ const Home = () => {
                     </button>
                 </div>
             </div>
+
 
             {/* 5th div - Footer */}
             <div className="w-full bg-transparent flex flex-col items-center mt-8">

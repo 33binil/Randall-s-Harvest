@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { motion } from "framer-motion";
 import {Link, useNavigate} from "react-router-dom";
 import {AlignJustify} from "lucide-react";
 
@@ -7,6 +8,12 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
         <div
             className="w-full min-h-screen relative bg-cover bg-left lg:bg-center"
             style={{
@@ -49,8 +56,8 @@ const Login = () => {
                 <section className="flex justify-center items-center py-0 lg:py-24">
                     <div className="w-[786px] h-[740px] bg-black/50 rounded-xl shadow-lg flex flex-col items-center justify-center px-12">
                         {/* Heading */}
-                        <h1 className="text-white font-andika text-3xl font-bold mb-2">Welcome back</h1>
-                        <p className="text-gray-300 text-lg font-andika mb-10">Please enter your details</p>
+                        <h1 className="text-white font-andika text-3xl font-bold mb-6 animate-float-y">Welcome back</h1>
+                        <p className="text-gray-300 text-lg font-andika mb-14 animate-float-y">Please enter your details</p>
 
                         {/* Email Input */}
                         <div className="w-full mt-10 lg:mt-0 mb-6">
@@ -105,6 +112,7 @@ const Login = () => {
                 </section>
             </div>
         </div>
+        </motion.section>
     )
 }
 export default Login

@@ -1,5 +1,6 @@
 // src/pages/Shop.jsx
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {AlignJustify, Copyright, Instagram, MessageCircleReply, Minus, Plus, Truck} from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -11,6 +12,12 @@ const Shop = () => {
     const [activeTab, setActiveTab] = useState("description");
 
     return (
+        <motion.section
+            className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+        >
         <div
             className="w-full min-h-screen"
             style={{
@@ -19,7 +26,7 @@ const Shop = () => {
         >
             {/* ---------- Header ---------- */}
             <section className="w-screen flex justify-center">
-                <div className="relative w-full lg:h-[90px] overflow-hidden">
+                <div className="relative w-screen lg:h-[90px] overflow-hidden">
                     <div className="relative z-20 flex items-center justify-between py-5 lg:py-8 px-4 lg:px-8">
                         <img
                             src="/logo1.png"
@@ -258,6 +265,7 @@ const Shop = () => {
                 </div>
             </section>
         </div>
+        </motion.section>
     );
 };
 

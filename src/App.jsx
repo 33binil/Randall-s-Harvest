@@ -1,5 +1,8 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Landing from "./pages/Landing.jsx";
 import Home from "./pages/Home.jsx";
 import Story from "./pages/Story.jsx";
@@ -10,6 +13,14 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 
 const App = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            once: true,     // animate only once when element enters viewport
+            easing: "ease-out", // easing type
+        });
+    }, []);
+
     return (
         <Router>
             <Routes>
@@ -23,6 +34,7 @@ const App = () => {
                 <Route path="/register" element={<Register />} />
             </Routes>
         </Router>
-    )
-}
-export default App
+    );
+};
+
+export default App;

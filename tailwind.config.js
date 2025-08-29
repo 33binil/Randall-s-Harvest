@@ -7,6 +7,10 @@ export default {
   theme: {
     extend: {
       keyframes: {
+        rotateOnce: {
+          "0%": { transform: "rotate(7deg)" },
+          "100%": { transform: "rotate(-7deg)" },
+        },
         floatY: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-15px)" },
@@ -30,6 +34,7 @@ export default {
         "drop-in": "dropIn 1.2s ease-out forwards",
         "drop-then-float": "dropIn 1.2s ease-out forwards, floatY 3s ease-in-out infinite 1.2s",
         "fade-drop": "fadeDrop 1s ease-out forwards",
+        "rotate-once": "rotateOnce 1s ease-out forwards",
       },
       fontFamily: {
         michroma: ["Michroma", "sans-serif"],
