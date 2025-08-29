@@ -34,9 +34,8 @@ const Toggle = () => {
                     <nav className="mt-8 space-y-8 font-andika">
                         <Link className="block text-[20px] sm:text-[22px]" to="/home">Home</Link>
                         <Link className="block text-[20px] sm:text-[22px]" to="/story">Story</Link>
-                        <a className="block text-[20px] sm:text-[22px]" href="#shop">Shop</a>
-                        <a className="block text-[20px] sm:text-[22px]" href="#cart">Cart</a>
-                        <a className="block text-[20px] sm:text-[22px]" href="#contact">Contact Us</a>
+                        <Link className="block text-[20px] sm:text-[22px]" to="/shop">Shop</Link>
+                        <Link className="block text-[20px] sm:text-[22px]" to="/contact">Contact Us</Link>
                     </nav>
                 </div>
             </motion.aside>

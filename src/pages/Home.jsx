@@ -33,9 +33,8 @@ const Home = () => {
                     <div className="hidden md:flex space-x-16 font-bold text-white font-andika">
                         <Link to="/home">Home</Link>
                         <Link to="/story">Story</Link>
-                        <button>Shop</button>
-                        <button>Cart</button>
-                        <button>Contact Us</button>
+                        <Link to="/Shop">Shop</Link>
+                        <Link to="/contact">Contact Us</Link>
                     </div>
 
                     <button className="relative w-[85px] h-[20px] lg:w-[170px] lg:h-[40px] left-[50px] lg:left-0 rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
@@ -149,7 +148,7 @@ const Home = () => {
                     </p>
                     <h2 className="text-white font-andika text-[24px] mb-6">₹ 179.00</h2>
                     <button className="w-[170px] h-[40px] mb-16 lg:mb-0 rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
-                        🛒 Add to Cart
+                        🛒 Ready to Buy ?
                     </button>
                 </div>
             </div>

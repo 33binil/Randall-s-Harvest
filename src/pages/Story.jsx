@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {AlignJustify, Leaf, Award, Users, Lightbulb, Scale, Headset, Instagram, MessageCircleReply, Copyright} from "lucide-react";
 
 const Story = () => {
@@ -19,11 +19,10 @@ const Story = () => {
                         <img src="/logo1.png" alt="Logo" className="relative w-[74px] h-[25px] lg:w-[110px] lg:h-[42px] left-2 lg:left-5" />
 
                         <div className="hidden md:flex space-x-16 font-bold text-white font-andika">
-                            <button>Home</button>
-                            <button>Story</button>
-                            <button>Shop</button>
-                            <button>Cart</button>
-                            <button>Contact Us</button>
+                            <Link to="/home">Home</Link>
+                            <Link to="/story">Story</Link>
+                            <Link to="/Shop">Shop</Link>
+                            <Link to="/contact">Contact Us</Link>
                         </div>
 
                         <button className="relative w-[85px] h-[20px] lg:w-[170px] lg:h-[40px] right-5 lg:right-5 rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
@@ -97,7 +96,7 @@ const Story = () => {
                 {/* Grid */}
                 <div className="mt-28 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: "Smoked Paprika", image: "/smokedpaprika.png", href: "https://en.wikipedia.org/wiki/Paprika", desc: "Smoked paprika is a rich, smoky spice made from wood-smoked red peppers, perfect for adding depth and flavor to meats, stews, and veggies." },
+                        { title: "Smoked Paprika", image: "https://raw.githubusercontent.com/33binil/Randall-s-Harvest/main/public/smokedpaprika.png", href: "https://en.wikipedia.org/wiki/Paprika", desc: "Smoked paprika is a rich, smoky spice made from wood-smoked red peppers, perfect for adding depth and flavor to meats, stews, and veggies." },
                         { title: "Garlic", image: "/garlic.png", href: "https://en.wikipedia.org/wiki/Garlic", desc: "Garlic is a flavorful, aromatic bulb used worldwide as a spice and medicine, known for its pungent taste and health benefits." },
                         { title: "Onion", image: "/onion.png", href: "https://en.wikipedia.org/wiki/Onion", desc: "Onion is a versatile vegetable with a sharp, savory flavor that turns sweet when cooked, widely used to enhance dishes around the world." },
                         { title: "Black pepper", image: "/pepper.png", href: "https://en.wikipedia.org/wiki/Black_pepper", desc: "Black pepper is a bold, aromatic spice made from dried peppercorns, prized for its sharp, spicy flavor that enhances both savory and sweet dishes." },
@@ -232,7 +231,6 @@ const Story = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }
