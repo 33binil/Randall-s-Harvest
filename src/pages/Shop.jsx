@@ -6,8 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 const Shop = () => {
     const [quantity, setQuantity] = useState(1);
     const navigate = useNavigate();
-    const [mainImage, setMainImage] = useState("/7.png");
-    const thumbnails = ["/6.png", "/5.png", "/3.png", "/2.png"];
+    const [mainImage, setMainImage] = useState("/7.jpg");
+    const thumbnails = ["/6.jpg", "/5.jpg", "/3.jpg", "/2.jpg"];
     const [activeTab, setActiveTab] = useState("description");
 
     return (
