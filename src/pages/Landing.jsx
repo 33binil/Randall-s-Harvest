@@ -1,4 +1,3 @@
-// src/components/Landing.jsx
 import React, { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";

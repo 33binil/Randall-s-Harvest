@@ -1,11 +1,12 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
 import {AlignJustify} from "lucide-react";
 import {
     Phone, MapPin, Mail,
 } from "lucide-react";
 
 const Contact = () => {
+    const navigate = useNavigate();
     return (
         <div
             className="w-full min-h-screen"
