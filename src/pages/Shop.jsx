@@ -34,9 +34,12 @@ const Shop = () => {
                             <Link to="/contact">Contact Us</Link>
                         </div>
 
-                        <button className="w-[85px] h-[20px] lg:w-[170px] lg:h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <Link
+                            to="/login"
+                            className="w-[85px] h-[28px] lg:w-[170px] lg:h-[40px] flex items-center justify-center rounded-lg bg-[#265B06] text-white font-andika
+                                         text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             Login
-                        </button>
+                        </Link>
 
                         <div className="md:hidden flex">
                             <button

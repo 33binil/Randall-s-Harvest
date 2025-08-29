@@ -11,8 +11,10 @@ import {
     AlignJustify,
 } from "lucide-react";
 
+
 const Home = () => {
     const navigate = useNavigate();
+
     return (
         <motion.section
             className="w-full min-h-screen flex flex-col items-center bg-[#171816] overflow-x-hidden"
@@ -43,9 +45,14 @@ const Home = () => {
                     </div>
 
                     <div className="flex items-center space-x-3">
-                        <button className="w-[85px] h-[28px] lg:w-[170px] lg:h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <Link
+                            to="/login"
+                            className="w-[85px] h-[28px] lg:w-[170px] lg:h-[40px] flex items-center justify-center rounded-lg bg-[#265B06] text-white font-andika
+                                         text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             Login
-                        </button>
+                        </Link>
+
+
                         <div className="md:hidden flex">
                             <button
                                 onClick={() => navigate("/toggle")}
@@ -63,15 +70,15 @@ const Home = () => {
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 lg:gap-0 lg:mt-32 mt-5">
                     {/* Left - Text */}
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        <h1 className="text-white font-andika text-[32px] lg:text-[60px] font-bold leading-tight">
+                        <h1 className="text-white font-andika text-[32px] lg:text-[60px] animate-fade-drop font-bold leading-tight">
                             Elevate Your <br /> Culinary Experience
                         </h1>
-                        <p className="mt-6 text-white font-andika text-[16px] lg:text-[22px] max-w-xl mx-auto lg:mx-0">
+                        <p className="mt-6 text-white font-andika text-[16px] animate-fade-drop lg:text-[22px] max-w-xl mx-auto lg:mx-0">
                             Discover Randall's OMNIBLEND, a premium collection of artisanal
                             spice blends crafted to transform ordinary dishes into
                             extraordinary culinary experiences.
                         </p>
-                        <button className="mt-10 w-[160px] h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <button className="mt-10 w-[160px] h-[40px] rounded-lg bg-[#265B06] animate-fade-drop text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             🛒 Shop now
                         </button>
                     </div>
@@ -96,7 +103,7 @@ const Home = () => {
                 className="w-full py-16"
                 style={{ background: "linear-gradient(135deg, #1E211D, #161616)" }}
             >
-                <h1 className="text-white font-andika text-[32px] lg:text-[40px] text-center font-bold">
+                <h1 className="text-white font-andika text-[32px] animate-fade-drop lg:text-[40px] text-center font-bold">
                     Why Choose Omniblend
                 </h1>
 
@@ -104,10 +111,10 @@ const Home = () => {
                     {/* Box 1 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
                         <Leaf className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
                             100% Natural
                         </h2>
-                        <p className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
                             Sourced from the finest organic farms around the world, free from
                             additives and preservatives.
                         </p>
@@ -116,10 +123,10 @@ const Home = () => {
                     {/* Box 2 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
                         <FlaskConical className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
                             Expertly Crafted
                         </h2>
-                        <p className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
                             Blended by master herbalists with decades of experience in flavor
                             profiling.
                         </p>
@@ -128,10 +135,10 @@ const Home = () => {
                     {/* Box 3 */}
                     <div className="w-[280px] lg:w-[320px] min-h-[380px] bg-[#2A3028] rounded-lg flex flex-col items-center p-6 text-center">
                         <HeartPulse className="w-[55px] h-[55px] text-[#38611F] mt-6 lg:mt-10 animate-float-y" />
-                        <h2 className="text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
+                        <h2 className="animate-fade-drop text-white text-[22px] lg:text-[26px] font-andika font-bold mt-10">
                             Health Benefits
                         </h2>
-                        <p className="text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
+                        <p className="animate-fade-drop text-gray-300 text-[15px] lg:text-[18px] font-andika mt-6">
                             Packed with antioxidants and nutrients that support overall
                             wellness and immunity.
                         </p>
@@ -147,17 +154,17 @@ const Home = () => {
                     className="w-[260px] lg:w-[480px] h-auto rotate-[-6deg]"
                 />
                 <div className="max-w-[650px]">
-                    <h1 className="text-white font-bold font-andika text-[28px] lg:text-[42px] mb-6">
+                    <h1 className="text-white animate-fade-drop font-bold font-andika text-[28px] lg:text-[42px] mb-6">
                         Why Choose Omniblend
                     </h1>
-                    <p className="text-white font-andika text-[14px] lg:text-[18px] mb-6">
+                    <p className="text-white animate-fade-drop font-andika text-[14px] lg:text-[18px] mb-6">
                         Because your time, taste, and standards deserve better. Cooking
                         shouldn't be a chore—or a flavorless routine. Whether it’s breakfast
                         or a midnight snack, OmniBlend replaces cluttered spice racks and
                         guesswork with one bold shake. <br />
                         OmniBlend — where flavor meets freedom.
                     </p>
-                    <h2 className="text-white font-andika text-[22px] mb-6">₹ 179.00</h2>
+                    <h2 className="text-white animate-fade-drop font-andika text-[22px] mb-6">₹ 179.00</h2>
                     <button className="w-[170px] h-[40px] rounded-lg bg-[#265B06] text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                         🛒 Ready to Buy ?
                     </button>

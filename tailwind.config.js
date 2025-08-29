@@ -19,13 +19,17 @@ export default {
           "0%": { transform: "translateY(-100vh)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        fadeDrop: {
+          "0%": { transform: "translateY(-40px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
         "float-y": "floatY 3s ease-in-out infinite",
         "zoom-rotate-once": "zoomRotate 2s ease-out forwards",
         "drop-in": "dropIn 1.2s ease-out forwards",
-        // combo: first dropIn, then floatY
         "drop-then-float": "dropIn 1.2s ease-out forwards, floatY 3s ease-in-out infinite 1.2s",
+        "fade-drop": "fadeDrop 1s ease-out forwards",
       },
       fontFamily: {
         michroma: ["Michroma", "sans-serif"],

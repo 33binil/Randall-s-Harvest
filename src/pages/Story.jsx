@@ -25,9 +25,13 @@ const Story = () => {
                             <Link to="/contact">Contact Us</Link>
                         </div>
 
-                        <button className="relative w-[85px] h-[20px] lg:w-[170px] lg:h-[40px] right-5 lg:right-5 rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <Link
+                            to="/login"
+                            className="w-[85px] h-[28px] lg:w-[170px] lg:h-[40px] flex items-center justify-center rounded-lg bg-[#265B06] text-white font-andika
+                                         text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             Login
-                        </button>
+                        </Link>
+
                         <div className="md:hidden flex right-4 relative">
                             <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
                                 <AlignJustify className="text-white"/>
@@ -214,7 +218,6 @@ const Story = () => {
                         </nav>
                     </div>
 
-                    {/* Icon buttons centered */}
                     <div className="mt-24 lg:mt-6 flex items-center justify-center gap-8">
                         <button aria-label="Instagram" className="p-2 text-white hover:text-[#6AC05E] transition">
                             <Instagram className="w-7 h-7" />

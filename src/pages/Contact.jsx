@@ -28,9 +28,12 @@ const Contact = () => {
                             <Link to="/contact">Contact Us</Link>
                         </div>
 
-                        <button className="relative w-[85px] h-[20px] lg:w-[170px] lg:h-[40px] right-5 lg:right-5 rounded-lg bg-[#265B06] text-white font-andika text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <Link
+                            to="/login"
+                            className="w-[85px] h-[28px] lg:w-[170px] lg:h-[40px] flex items-center justify-center rounded-lg bg-[#265B06] text-white font-andika
+                                         text-[10px] lg:text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             Login
-                        </button>
+                        </Link>
                         <div className="md:hidden flex right-4 relative">
                             <button onClick={() => navigate('/toggle')} aria-label="Menu" className="p-2 hover:text-[#38611F] transition">
                                 <AlignJustify className="text-white"/>
