@@ -290,10 +290,10 @@ const Home = () => {
 
                 <div className="flex space-x-4 mb-4">
                     <button>
-                        <Instagram className="w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] text-white" />
+                        <Instagram className="w-[25px] h-auto lg:w-[30px] text-white" />
                     </button>
                     <button>
-                        <MessageCircleReply className="w-[25px] h-[25px] lg:w-[30px] lg:h-[30px] text-white" />
+                        <MessageCircleReply className="w-[25px] h-auto lg:w-[30px] text-white" />
                     </button>
                 </div>
 

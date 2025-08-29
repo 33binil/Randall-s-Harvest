@@ -238,8 +238,8 @@ const Shop = () => {
                 <div className="max-w-[1200px] h-[280px] lg:h-[210px] mx-auto w-full">
                     {/* Top row: left logo, centered nav */}
                     <div className="relative flex items-center justify-center h-[60px]">
-                        <img src="/logo1.png" alt="Logo" className="absolute lg:-left-32 mb-8 mt-8 lg:top-1/2 -translate-y-1/2 w-[148px] h-[56px] object-contain" />
-                        <nav className="relative mt-32 lg:mt-0 flex items-center gap-12 lg:gap-24 text-white font-andika font-bold ">
+                        <img src="/logo1.png" alt="Logo" className="absolute lg:-left-32 mb-8 mt-8 lg:top-1/2 -translate-y-1/2 w-[100px] lg:w-[148px] h-auto] object-contain" />
+                        <nav className="relative mt-32 lg:mt-0 flex items-center gap-12 lg:gap-24 text-[12px] lg:text-[16px] text-white font-andika font-bold ">
                             <a href="/about" className="hover:text-[#6AC05E] transition">About Us</a>
                             <a href="/recipes" className="hover:text-[#6AC05E] transition">Recipes</a>
                             <a href="/blog" className="hover:text-[#6AC05E] transition">Blog</a>
@@ -249,10 +249,10 @@ const Shop = () => {
 
                     {/* Icon buttons centered */}
                     <div className="mt-24 lg:mt-6 flex items-center justify-center gap-8">
-                        <button aria-label="Instagram" className="p-2 text-white hover:text-[#6AC05E] transition">
+                        <button aria-label="Instagram" className="w-[25px] h-auto lg:w-[30px] text-white hover:text-[#6AC05E] transition">
                             <Instagram className="w-7 h-7" />
                         </button>
-                        <button aria-label="Message" className="p-2 text-white hover:text-[#6AC05E] transition">
+                        <button aria-label="Message" className="w-[25px] h-auto lg:w-[30px] text-white hover:text-[#6AC05E] transition">
                             <MessageCircleReply className="w-7 h-7" />
                         </button>
                     </div>
