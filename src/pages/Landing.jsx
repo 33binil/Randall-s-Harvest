@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Landing = () => {
         >
             {/* Navbar */}
             <motion.header
-                className="w-full flex items-center justify-between px-6 lg:px-16 py-6 absolute top-0 left-0"
+                className="w-full flex items-center justify-between px-6 lg:px-16 py-6 absolute top-0 left-0 z-50"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: isExiting ? 0 : 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -36,21 +36,29 @@ const Landing = () => {
 
                 {/* Center Buttons */}
                 <nav className="relative flex gap-3 lg:left-0 left-12">
-                    <button className="text-[13px] font-michroma font-medium text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-4 py-1.5 rounded-full">
+                    <Link
+                        to="/home"
+                        className="text-[13px] font-michroma font-medium text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-4 py-1.5 rounded-full"
+                    >
                         Product
-                    </button>
-                    <button className="text-[13px] font-michroma font-medium text-[#EDEAFF] bg-[#1E1E1E] hover:bg-[#000000] transition px-4 py-1.5 rounded-full">
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className="text-[13px] font-michroma font-medium text-[#EDEAFF] bg-[#1E1E1E] hover:bg-[#000000] transition px-4 py-1.5 rounded-full"
+                    >
                         Contact
-                    </button>
+                    </Link>
                 </nav>
 
                 {/* Right Icon */}
-                <h1 className="relative text-white font-extrabold text-2xl top-14 lg:top-0 -left-3 lgleft-0">. . .</h1>
+                <h1 className="relative text-white font-extrabold text-2xl top-14 lg:top-0 -left-3 lg:left-0">
+                    . . .
+                </h1>
             </motion.header>
+
 
             {/* Hero Section */}
             <main className="flex-1 flex items-center justify-center relative">
-
                 {/* Central product container */}
                 <div className="relative flex justify-center items-center">
                     {/* Background image */}
@@ -72,13 +80,12 @@ const Landing = () => {
                         transition={isExiting ? { duration: 1.1, ease: "easeIn" } : {}}
                         onAnimationComplete={() => {
                             if (isExiting) {
-                                // Navigate slightly after fade-to-black starts
                                 setTimeout(() => navigate("/home"), 150);
                             }
                         }}
                     />
 
-                    {/* Overlay text (positioned around product) */}
+                    {/* Overlay text */}
                     <div className="absolute -left-0 lg:-left-[600px] -top-16 lg:top-36 text-right">
                         <h1 className="font-light font-michroma text-[22px] lg:text-[30px]">
                             Randall’s <br /> Harvest
@@ -96,7 +103,7 @@ const Landing = () => {
                     </div>
                 </div>
 
-                {/* Blur overlay (below product to blur background only) */}
+                {/* Blur overlay */}
                 <AnimatePresence>
                     {isExiting && (
                         <motion.div
@@ -110,7 +117,7 @@ const Landing = () => {
                     )}
                 </AnimatePresence>
 
-                {/* Black fade overlay (above everything) */}
+                {/* Black fade overlay */}
                 <AnimatePresence>
                     {isExiting && (
                         <motion.div
@@ -140,38 +147,15 @@ const Landing = () => {
                 </h1>
 
                 {/* Button */}
-                <button onClick={handleReadyToBuy} className="text-[13px] font-michroma font-bold text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-3 lg:px-5 py-1 lg:py-2 rounded-full">
+                <button
+                    onClick={handleReadyToBuy}
+                    className="text-[13px] font-michroma font-bold text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-3 lg:px-5 py-1 lg:py-2 rounded-full"
+                >
                     Ready to Buy ?
                 </button>
             </motion.footer>
-
-            {/* Global overlays placed at section level to cover entire page */}
-            <AnimatePresence>
-                {isExiting && (
-                    <motion.div
-                        className="absolute inset-0 z-40"
-                        initial={{ backdropFilter: "blur(0px)" }}
-                        animate={{ backdropFilter: "blur(10px)" }}
-                        exit={{ backdropFilter: "blur(0px)" }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                        style={{ background: "transparent" }}
-                    />
-                )}
-            </AnimatePresence>
-            <AnimatePresence>
-                {isExiting && (
-                    <motion.div
-                        className="absolute inset-0 bg-black z-50"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 1.1, ease: "easeIn" }}
-                    />
-                )}
-            </AnimatePresence>
         </motion.section>
     );
 };
 
 export default Landing;
-
