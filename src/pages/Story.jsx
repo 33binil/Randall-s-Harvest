@@ -96,7 +96,7 @@ const Story = () => {
                 {/* Grid */}
                 <div className="mt-28 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: "Smoked Paprika", image: "https://raw.githubusercontent.com/33binil/Randall-s-Harvest/main/public/smokedpaprika.png", href: "https://en.wikipedia.org/wiki/Paprika", desc: "Smoked paprika is a rich, smoky spice made from wood-smoked red peppers, perfect for adding depth and flavor to meats, stews, and veggies." },
+                        { title: "Smoked Paprika", image: "/smokedpaprika.jpg", href: "https://en.wikipedia.org/wiki/Paprika", desc: "Smoked paprika is a rich, smoky spice made from wood-smoked red peppers, perfect for adding depth and flavor to meats, stews, and veggies." },
                         { title: "Garlic", image: "/garlic.jpg", href: "https://en.wikipedia.org/wiki/Garlic", desc: "Garlic is a flavorful, aromatic bulb used worldwide as a spice and medicine, known for its pungent taste and health benefits." },
                         { title: "Onion", image: "/onion.jpg", href: "https://en.wikipedia.org/wiki/Onion", desc: "Onion is a versatile vegetable with a sharp, savory flavor that turns sweet when cooked, widely used to enhance dishes around the world." },
                         { title: "Black pepper", image: "/pepper.jpg", href: "https://en.wikipedia.org/wiki/Black_pepper", desc: "Black pepper is a bold, aromatic spice made from dried peppercorns, prized for its sharp, spicy flavor that enhances both savory and sweet dishes." },
