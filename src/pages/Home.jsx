@@ -84,7 +84,7 @@ const Home = () => {
                             spice blends crafted to transform ordinary dishes into
                             extraordinary culinary experiences.
                         </p>
-                        <button className="mt-10 w-[160px] h-[40px] rounded-lg bg-[#265B06] animate-fade-drop text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
+                        <button onClick={() => navigate("/shop")} className="mt-10 w-[160px] h-[40px] rounded-lg bg-[#265B06] animate-fade-drop text-white font-andika text-lg transition duration-300 hover:bg-[#38611F] hover:shadow-[0_0_15px_#38611F] hover:scale-105">
                             🛒 Shop now
                         </button>
                     </div>

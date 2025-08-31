@@ -140,7 +140,7 @@ const Shop = () => {
                             </button>
                         </div>
 
-                        <button className="w-[170px] h-[40px] flex items-center justify-center gap-2 px-6 py-3 bg-[#265B06] rounded-full font-semibold text-white shadow-lg hover:bg-[#38611F] hover:shadow-green-500/30 transition">
+                        <button onClick={() => navigate("/checkout")} className="w-[170px] h-[40px] flex items-center justify-center gap-2 px-6 py-3 bg-[#265B06] rounded-full font-semibold text-white shadow-lg hover:bg-[#38611F] hover:shadow-green-500/30 transition">
                             Buy <Truck size={18} />
                         </button>
 

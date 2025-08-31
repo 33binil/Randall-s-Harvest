@@ -55,7 +55,7 @@ const Register = () => {
                 </section>
 
                 <section>
-                    <div className=" flex items-center justify-center bg-transparent px-4 lg:py-32">
+                    <div className=" flex items-center justify-center bg-transparent px-4 lg:py-20">
                         <div className="w-full max-w-[1200px] flex flex-col lg:flex-row gap-24">
 
                             {/* Left Side - Login */}
@@ -121,6 +121,9 @@ const Register = () => {
                                         </button>
                                     </div>
                                 </div>
+                                <button onClick={() => navigate("/successfullyreg")} className="w-full font-andika bg-[#111] text-white py-3 mt-8 rounded-md font-semibold hover:bg-[#265B06] transition mb-6">
+                                    Register
+                                </button>
 
                                 {/* OR Separator */}
                                 <div className="flex items-center w-full mt-8 mb-6">

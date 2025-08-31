@@ -122,6 +122,7 @@ const Landing = () => {
                     {isExiting && (
                         <motion.div
                             className="absolute inset-0 bg-black z-30"
+                            style={{ height: '100vh' }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}

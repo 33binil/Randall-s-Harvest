@@ -11,6 +11,8 @@ import Shop from "./pages/Shop.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import Successfullyreg from "./pages/Successfullyreg.jsx";
 
 const App = () => {
     useEffect(() => {
@@ -32,6 +34,8 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/successfullyreg" element={<Successfullyreg />} />
             </Routes>
         </Router>
     );
