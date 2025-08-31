@@ -86,13 +86,13 @@ const Landing = () => {
                     />
 
                     {/* Overlay text */}
-                    <div className="absolute -left-0 lg:-left-[600px] -top-16 lg:top-36 text-right">
+                    <div className="absolute -left-0 lg:-left-[600px] -top-6 lg:top-36 text-right">
                         <h1 className="font-light font-michroma text-[22px] lg:text-[30px]">
                             Randall’s <br /> Harvest
                         </h1>
                     </div>
 
-                    <div className="absolute -left-0 lg:-left-[600px] -top-0 lg:top-[240px] text-right">
+                    <div className="absolute -left-0 lg:-left-[600px] top-10 lg:top-[240px] text-right">
                         <h1 className="font-extrabold font-michroma text-[22px] lg:text-[30px]">
                             OMNIBLEND
                         </h1>
