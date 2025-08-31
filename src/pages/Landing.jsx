@@ -36,7 +36,7 @@ const Landing = () => {
                 />
 
                 {/* Center Buttons */}
-                <nav className="hidden sm:flex relative gap-3 lg:left-0 left-12">
+                <nav className="hidden sm:flex absolute left-1/2 -translate-x-1/2 gap-3">
                     <Link
                         to="/home"
                         className="text-[13px] font-michroma font-medium text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-4 py-1.5 rounded-full"
@@ -52,10 +52,7 @@ const Landing = () => {
                 </nav>
 
                 {/* Right Icon */}
-                <div className="flex sm:hidden items-center justify-center">
-                    <MoreHorizontal className="text-white w-8 h-8" />
-                </div>
-                <div className="hidden sm:flex items-center justify-center">
+                <div className="flex items-center justify-center">
                     <MoreHorizontal className="text-white w-8 h-8" />
                 </div>
             </motion.header>
@@ -89,16 +86,14 @@ const Landing = () => {
                         }}
                     />
 
-                    {/* Overlay text */}
-                    <div className="absolute -left-10 sm:-left-0 lg:-left-[600px] -top-24 sm:-top-6 lg:top-36 text-right">
-                        <h1 className="font-light font-michroma text-lg sm:text-[22px] lg:text-[30px]">
-                            Randall’s <br /> Harvest
-                        </h1>
-                    </div>
 
-                    <div className="absolute -left-10 sm:-left-0 lg:-left-[600px] -top-8 sm:-top-10 lg:top-[240px] text-right">
+                    {/* Overlay text */}
+                    <div className="absolute w-full flex flex-col items-center -top-24 sm:-top-16 lg:-top-12 text-center">
                         <h1 className="font-extrabold font-michroma text-lg sm:text-[22px] lg:text-[30px]">
-                            OMNIBLEND
+                            OMNIBLEND<br/> by
+                        </h1>
+                        <h1 className="font-light font-michroma text-lg sm:text-[22px] lg:text-[30px] mt-3">
+                            Randall’s Harvest
                         </h1>
                     </div>
 
@@ -137,28 +132,25 @@ const Landing = () => {
 
             {/* Bottom Section */}
             <motion.footer
-                className="w-full flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 lg:px-16 mb-8 gap-4 sm:gap-3"
+                className="w-full flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 lg:px-16 pb-8 pt-4 gap-4"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: isExiting ? 0 : 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
                 {/* Left Icon */}
-                <div className="flex sm:hidden items-center justify-center">
-                    <MoreHorizontal className="text-white w-8 h-8" />
-                </div>
-                <div className="hidden sm:flex items-center justify-center">
+                <div className="flex items-center justify-center order-3 sm:order-1">
                     <MoreHorizontal className="text-white w-8 h-8" />
                 </div>
 
                 {/* Price */}
-                <h1 className="text-white font-michroma font-bold text-lg lg:text-xl order-2 sm:order-1">
+                <h1 className="text-white font-michroma font-bold text-lg lg:text-xl order-2 sm:order-2">
                     ₹ 179.00
                 </h1>
 
                 {/* Button */}
                 <button
                     onClick={handleReadyToBuy}
-                    className="text-[13px] font-michroma font-bold text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-4 sm:px-3 lg:px-5 py-2 sm:py-1 lg:py-2 rounded-full order-1 sm:order-2"
+                    className="text-[13px] font-michroma font-bold text-[#0A0A0A] bg-[#D9D9D9] hover:bg-[#FFFFFF] transition px-4 sm:px-3 lg:px-5 py-2 sm:py-1 lg:py-2 rounded-full order-1 sm:order-3"
                 >
                     Ready to Buy ?
                 </button>
