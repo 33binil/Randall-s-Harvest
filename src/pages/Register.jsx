@@ -121,7 +121,9 @@ const Register = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <button onClick={() => navigate("/successfullyreg")} className="w-full font-andika bg-[#111] text-white py-3 mt-8 rounded-md font-semibold hover:bg-[#265B06] transition mb-6">
+                                <button
+                                    onClick={() => navigate("/successfullyreg")}
+                                    className="w-full font-andika bg-[#111] text-white py-3 mt-8 rounded-md font-semibold hover:bg-[#265B06] transition mb-6">
                                     Register
                                 </button>
 
